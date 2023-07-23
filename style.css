@@ -1,0 +1,495 @@
+
+/* css actualizado 1*/
+
+body {
+    padding-top: 60px;
+    overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif; 
+   
+  }
+  
+/* menu */
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::before {
+  width: calc(100% + 4px);
+}
+/* Estilos para el slider */
+#inicio .slider-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#inicio .slides {
+  display: flex;
+  width: 400%;
+  animation: slide-animation 16s infinite;
+}
+
+#inicio .slide {
+  flex: 25%;
+  position: relative;
+  overflow: hidden;
+}
+
+#inicio .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#inicio .slide-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+#inicio .slide-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#inicio .slide-content p {
+  font-size: 18px;
+}
+
+#inicio .slider-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+#inicio .slider-controls label {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 6px;
+}
+
+/* Slider animations */
+@keyframes slide-animation {
+  10%, 100% {
+    transform: translateX(0%);
+  }
+  40%, 80% {
+    transform: translateX(-25%);
+  }
+  80%, 100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* nosotros */
+
+section#nosotros {
+  padding: 40px 0;
+}
+
+section#nosotros .row {
+  margin-bottom: 40px;
+}
+
+section#nosotros h1,
+section#nosotros h2 {
+  margin-bottom: 20px;
+}
+
+section#nosotros p {
+  margin-bottom: 30px;
+}
+
+section#nosotros img {
+  margin-bottom: 20px;
+  
+}
+
+/* servicios */
+
+
+.service-card {
+  height: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s;
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  max-width: 150px;
+  margin: 0 auto 20px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  margin-bottom: 20px;
+}
+
+.service-card a.btn {
+
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.service-card a.btn:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+/* Estilos para la sección de productos */
+#productos {
+  padding: 80px 0;
+}
+
+#productos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#productos h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#productos .row {
+  margin-bottom: 40px;
+}
+
+#productos .product-card {
+  width: 250px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+#productos .product-card img {
+width: 150px;
+height: 150px;
+  margin-bottom: 15px;
+}
+
+#productos .product-card h3 {
+  margin-bottom: 10px;
+}
+
+#productos .product-card p {
+  margin-bottom: 0;
+}
+
+#productos .technology-section {
+  text-align: center;
+}
+
+#productos .technology-section h2 {
+  margin-bottom: 20px;
+}
+
+#productos .technology-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+#productos .technology-item {
+  margin: 18px;
+}
+
+#productos .technology-item > i {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+#productos .technology
+
+
+/*consultorias*/
+.card {
+  height: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s;
+  border: none;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+/* Estilos para las líneas de separación en la cabeza y el pie de la tarjeta */
+.header-line,
+.footer-line {
+  height: 2px;
+  background-color: #ccc;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las viñetas en verde */
+.card-body ul li {
+  list-style-type: disc;
+  color: green;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Estilos para el espacio entre las tarjetas */
+.card-deck {
+  margin-bottom: 20px;
+}
+
+.pricing-card-title {
+  font-size: 2.5rem;
+  margin: 0.75rem 0;
+  color: #333;
+}
+
+.list-unstyled {
+  text-align: left;
+  padding: 2rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Estilos para el botón */
+.card_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+}
+
+.card-footer a {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.card-footer a:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+  padding: 80px 0;
+}
+
+#contacto .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#contacto .contacto-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contacto .form-wrapper,
+#contacto .contact-info {
+  flex: 1;
+  padding: 20px;
+}
+
+#contacto h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contacto .form-group {
+  margin-bottom: 20px;
+}
+
+#contacto label {
+  font-weight: bold;
+}
+
+#contacto .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contacto .btn-primary {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contacto .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+#contacto .contact-info {
+  border-left: 1px solid #ccc;
+  padding-left: 40px;
+}
+
+#contacto .contact-info h3 {
+  margin-top: 0;
+}
+
+#contacto .contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+#contacto .contact-list li {
+  margin-bottom: 20px;
+}
+
+#contacto .contact-list h4 {
+  margin-bottom: 5px;
+}
+
+#contacto .contact-list p {
+  margin: 0;
+}
+
+/* comentarios */ 
+.comentario-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.comentario-card .nombre {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.comentario-card .calificacion {
+  color: #FFD700; /* Color amarillo para las estrellas de calificación */
+  margin-top: 10px;
+}
+
+.comentario-formulario {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.comentario-formulario .form-group {
+  margin-bottom: 15px;
+}
+
+.comentario-formulario label {
+  font-weight: bold;
+}
+
+.comentario-formulario textarea {
+  height: 100px;
+}
+
+.comentario-formulario button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.comentario-formulario button:hover {
+  background-color: #0056b3;
+}
+
+/* footer */
+
+.footer {
+  background-image: linear-gradient(to left, #f2f2f2, #dddddd);
+  color: #000; /* Color del texto para que contraste con el fondo */
+}
+
+.contact-info li:hover,
+.footer-menu ul li:hover {
+  color: #ff0000; /* Cambiar al color deseado */
+  cursor: pointer;
+}
+
+

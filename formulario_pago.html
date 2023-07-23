@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pago.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Formulario de Pago</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Resumen de la Consultoría</h1>
+                <h2>Paquete: <span id="package-name"></span></h2>
+                <h2>Precio: <span id="package-price"></span></h2>
+                <h2>Fecha y Hora de la Consultoría</h2>
+                <div class="form-group">
+                    <label for="consulting-date">Fecha de la Consultoría</label>
+                    <input type="date" id="consulting-date" name="consulting-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="consulting-time">Hora de la Consultoría</label>
+                    <select id="consulting-time" name="consulting-time" required>
+                        <option value="">Seleccione una hora</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                    </select>
+                </div>
+                <button type="button" onclick="checkAvailability()">Verificar Disponibilidad</button>
+                <p id="availability-message"></p>
+            </div>
+            <div class="col-md-6">
+                <h1>Datos de Pago</h1>
+                <form action="procesar_pago.php" method="POST">
+                    <input type="hidden" id="package-name-input" name="package-name">
+                    <input type="hidden" id="package-price-input" name="package-price">
+                    <input type="hidden" id="consulting-date-input" name="consulting-date">
+                    <input type="hidden" id="consulting-time-input" name="consulting-time">
+
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number">Número de Tarjeta</label>
+                        <input type="text" id="card-number" name="card-number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expiration-date">Fecha de Vencimiento</label>
+                        <input type="text" id="expiration-date" name="expiration-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" required>
+                    </div>
+
+                    <button type="submit">Procesar Pago</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="pago.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
